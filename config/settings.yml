@@ -1,0 +1,28 @@
+default: &default
+  paging:
+    per: 10
+  email:
+    mail_address_info: 'sokuhaku@sokuhaku.info'
+  crawler:
+    room:
+      type_service:
+        level: 4
+      name_service:
+        level: 2
+  datetime:
+    date_format: '%Y-%m-%d'
+  redis:
+    top:
+      expire_time: 10
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+staging:
+  <<: *default
+
+production:
+  <<: *default

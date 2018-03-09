@@ -1,0 +1,44 @@
+doctype html
+html lang='jp'
+  head
+    meta charset='utf-8'
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+    title トップ
+    
+    meta name="keywords" itemprop="keywords" content=""
+    meta name="description" itemprop="description" content=""
+    meta name="format-detection" content="telephone=no"
+    link rel="icon" href="icon/icon-favicon.ico"
+    link rel="apple-touch-icon-precomposed" href="assets/img/icon/icon-apple_touch.png"
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" 
+    link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'cable', 'data-turbolinks-track': 'reload'
+  
+  body class="drawer drawer--right"
+    = render 'application/sokuhaku/top_header'
+    = yield
+    = render 'application/sokuhaku/top_footer'
+
+  script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+  script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+  = javascript_include_tag('common.js')
+  = javascript_include_tag('plugin/scroll/smooth-scroll.min.js')
+  = javascript_include_tag('plugin/drawer/drawer.min.js')
+  = javascript_include_tag('plugin/iscroll/iscroll.min.js')
+  = javascript_include_tag('plugin/slick/slick.js')
+  / = javascript_include_tag('plugin/pace/pace.js')
+
+  javascript:
+    $(document).ready
+      $('body').bootstrapMaterialDesign()
+    
+    slickJs();
+    drawerJs();
+
+
+
+

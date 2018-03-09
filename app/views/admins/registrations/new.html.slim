@@ -1,0 +1,18 @@
+main.m-main.bg role='main'
+.g-title.cf
+  h1 class='ttl'
+    span 管理者作成
+section class='column_1 cf'
+  .g-box.cf
+    .g-box_inner.cf
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form-group bmd-form-group'}) do |f|
+        = devise_error_messages!
+        .form-group.bmd-form-group
+          = f.text_field :name, autofocus: true, class: 'form-control', placeholder: "名前"
+        .form-group.bmd-form-group
+          = f.email_field :email, autofocus: true, class: 'form-control', placeholder: "メールアドレス"
+        .form-group.bmd-form-group
+          = f.text_field :phone_number, autocomplete: "off", class: 'form-control', placeholder: "電話番号"
+        span.bmd-form-group.is-filled
+        .btn_wrap.cf
+          button.btn.btn-custom.btn-raised.btn-info type='submit' 作成

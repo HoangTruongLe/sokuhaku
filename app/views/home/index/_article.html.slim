@@ -1,0 +1,22 @@
+- homes.each do |home|
+  article class="u-home-imtes" 
+    div class="u-thumbnail" 
+      div class="js-slider cf" 
+        - home['pictures'][0..4].each do |picture|
+          div class="u-slide cf" 
+            a href="javascript:void(0)"
+              = image_tag "#{picture}", height: "250px", width: '100%' 
+      div class="u-favorite" 
+        i class="material-icons u-off" 
+          | favorite_border
+        i class="material-icons u-on" 
+          | favorite
+    div class="u-description cf" 
+      a href="#{home['url']}" class="u-link" target="_blank"
+        p class="u-spec" 
+          = home['spec'].upcase
+        h1 class="u-name" 
+          = home['name']
+        div class="u-status cf" 
+          p class="u-price" 
+          = "#{number_to_currency(home['price'], precision: 0, unit: home['currency'], format: '¥%n')}〜　/泊"

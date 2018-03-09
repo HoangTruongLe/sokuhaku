@@ -1,0 +1,10 @@
+- if notice
+    javascript:
+      toastr["success"]("#{notice}");
+- if alert
+    javascript:
+      toastr["error"]("#{alert}");
+- if flash[:error]
+    - flash[:error].each do |error|
+      javascript:
+        toastr["error"]("#{error}");

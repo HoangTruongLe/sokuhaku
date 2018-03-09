@@ -1,0 +1,22 @@
+main role='main'
+  header class="row f-align-items-center mt1 cf"
+         h1 class="col-7 col-md-9 main_title" ホスト一覧
+         div class="col-5 col-md-3"
+          = link_to 'ホスト作成', new_admins_host_path, class:"btn btn-custom btn-raised btn-info"
+  section class="bg_white mt1 pd1_6 sp_scroll"
+       table class="table table-striped text-left host_table"
+         thead
+           tr
+             th ID
+             th 名前
+             th ステータス
+             th ルームナンバー
+           tbody
+             - @hosts.each do |host|
+               tr
+                 td = host.id
+                 td = link_to host.name, admins_host_path(host)
+                 td
+                 td = host.rooms.size
+
+  =paginate @hosts

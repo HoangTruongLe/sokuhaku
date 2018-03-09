@@ -1,0 +1,19 @@
+main.m-main.bg[role="main"]
+  .g-title.cf
+    h1.ttl
+      span パスワード設定
+  section.column_1.cf
+    .g-box.cf
+      .g-box_inner.cf
+        = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :put }) do |f|
+          = devise_error_messages!
+          = f.hidden_field :confirmation_token
+          .form-group
+            label[for="label_password"] パスワード
+            = f.password_field :password, class: "form-control", id: "label_password", placeholder: "", required: true
+          .form-group
+            label[for="label_password2"] パスワード確認
+            = f.password_field :password_confirmation, class: "form-control", id: "label_password2", placeholder: "", required: true
+            small.form-text.text-danger 確認用パスワードが一致しません
+          .btn_wrap.cf
+            button.btn.btn-custom.btn-raised.btn-info[type="submit"] 設定

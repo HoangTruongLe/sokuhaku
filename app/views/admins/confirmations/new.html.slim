@@ -1,0 +1,14 @@
+main.m-main.bg[role="main"]
+  .g-title.cf
+    h1.ttl
+      span 確認の指示を再送信Eメール
+  section.column_1.cf
+    .g-box.cf
+      .g-box_inner.cf
+        = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+          = devise_error_messages!
+          .form-group
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "メールアドレス", required: true
+            small.form-text.text-danger
+          .btn_wrap.cf
+            button.btn.btn-custom.btn-raised.btn-info[type="submit"] 確認の指示を再送信

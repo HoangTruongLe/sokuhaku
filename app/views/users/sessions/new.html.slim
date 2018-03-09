@@ -1,0 +1,22 @@
+main.m-main.bg role='main'
+.g-title.cf
+  h1 class='ttl'
+    span ログイン
+section class='column_1 cf'
+  .g-box.cf
+    .g-box_inner.cf
+      = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form-group bmd-form-group'}) do |f|
+        .form-group.bmd-form-group
+          = f.email_field :email, autofocus: true, class: 'form-control', placeholder: "メールアドレス"
+        .form-group.bmd-form-group
+          = f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: "パスワード"
+        span.bmd-form-group.is-filled
+        .checkbox
+          label
+            = f.check_box :remember_me
+            span  ログインしたまま保存
+        .btn_wrap.cf
+          button.btn.btn-custom.btn-raised.btn-info type='submit' ログイン
+      .text-center.sp_pd.mt2
+        - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+          = link_to "パスワードを忘れた場合", new_password_path(resource_name), class: 'underline'

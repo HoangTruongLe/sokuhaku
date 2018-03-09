@@ -1,0 +1,16 @@
+main.m-main.bg[role="main"]
+  .g-title.cf
+    h1.ttl
+      span パスワード再設定
+    .description
+      p.text 登録したメールアドレスに、パスワード再設用のメールをお送りします
+  section.column_1.cf
+    .g-box.cf
+      .g-box_inner.cf
+        = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+          = devise_error_messages!
+          .form-group
+            = f.email_field :email, class: "form-control", id: "label_mail", placeholder: "例）neolab-sample@com", required: true
+            small.form-text.text-danger そのメールアドレスは登録されております
+          .btn_wrap.cf
+            button.btn.btn-custom.btn-raised.btn-info[type="submit"] 送信

@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title Sokuhaku
+    = csrf_meta_tags
+    meta name="keywords" content="template language"
+    meta name="author" content="author"
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+    meta name="format-detection" content="telephone=no"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,700|Material+Icons"
+    link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    body
+      nav class="navbar navbar-expand-lg fixed-top bg_white g-dashboard-header" id="mainNav"
+        a class="navbar-brand logo" href="#"
+          = image_tag("common/logo.svg")
+      .container-fluid.fixed_top_margin.m-main.bg
+        .dashboard-main.cf
+          = render 'alert'
+          = yield
+    footer class='g-footer cf' role="contentinfo"
+      .inner.cf
+        ul.footer_nav.cf
+          li
+            a href='#'
+              span 運営会社
+          li
+            a href='#'
+              span ご利用規約
+          li
+            a href='#'
+              span 特定商取引に基づく表示
+          li
+            a href='#'
+              span サイトポリシー
+          li
+            a href='#'
+              span 個人情報保護方針
+          li
+            a href='#'
+              span お問い合わせ
+          li
+            a href='#'
+              span © NEOLAB CO.,LTD.
+    script src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
+    script src='https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js'
+    script src='https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js'
+    = javascript_include_tag('common.js')
+    = javascript_include_tag('plugin/scroll/smooth-scroll.min.js')
+    javascript:
+      $(document).ready
+        $('body').bootstrapMaterialDesign()

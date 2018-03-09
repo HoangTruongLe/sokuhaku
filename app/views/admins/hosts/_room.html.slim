@@ -1,0 +1,13 @@
+article.u-home-imtes
+  .u-thumbnail
+    .js-slider.cf id="#{id_service}"
+      - 3.times do |v|
+        .u-slide.cf
+          a href="javascript:void(0)"
+            <img src="#{ img_service[v] ? img_service[v]['large'] : 'dtr'}" alt="" height="250px" width='100%'/>
+  .u-description.cf
+    a.u-link href='#'
+      p.u-spec = type_service
+      h1.u-name = name_service
+      .u-status.cf
+        p.u-price = "#{price_service} /泊"

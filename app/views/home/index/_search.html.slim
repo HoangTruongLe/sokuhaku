@@ -1,0 +1,179 @@
+section class="u-search-box cf" id="u-search-accordion"
+  div class="main-width inner cf"
+    nav class="u-search-nav cf"
+      p class="title"
+        | 検索対象
+      ul class="u-tab cf"
+        li
+          a class="" data-toggle="collapse" data-target="#u-tab-airbnb"
+            span Airbnb 
+        li
+          a class="collapsed" data-toggle="collapse" data-target="#u-tab-minpaku"
+            span 民泊.com
+    section id="u-tab-airbnb" class="collapse show" aria-labelledby="u-tab-airbnb" data-parent="#u-search-accordion"
+      a class="u-search-btn collapsed" data-toggle="collapse" data-target="#u-tab-airbnb-inner"
+        div class="u-btn u-btn-open"
+          | 検索メニューを開く 
+          i class="material-icons"
+            | arrow_drop_down
+        div class="u-btn u-btn-close"
+          | 検索メニューを閉じる
+          i class="material-icons"
+            | arrow_drop_up
+      article id="u-tab-airbnb-inner" class="collapse" aria-labelledby="u-tab-airbnb-inner" data-parent="#u-tab-airbnb"
+        section class="u-custom-search-items cf"
+          div class="row pt1 cf"
+            div class="col-2 u-title-block"
+              | ゲスト人数
+            div class="col-10 row u-guest-block cf"
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big" 
+                    | 大人
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 12
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big"
+                    | 子ども
+                  span class="u-small"
+                    | 年齢2-12
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 1
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big"
+                    | 乳幼児
+                  span class="u-small"
+                    | 2歳未満
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 1
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+          div class="row pt2 cf"
+            div class="col-2 u-title-block"
+              | 住宅タイプ
+            div class="col-10 row u-type-block cf"
+              div class="d-flex f-align-items-center u-items"
+                div class="checkbox"
+                  label
+                    input type="checkbox"
+                    div class="u-title"
+                      span class="u-big"
+                        | まるまる貸し切り
+                      span class="u-small"
+                        | まるまる独り占めできる住まい
+              div class="d-flex f-align-items-center u-items"
+                div class="checkbox"
+                  label
+                    input type="checkbox"
+                    div class="u-title"
+                      span class="u-big"
+                        | 個室
+                      span class="u-small"
+                        | 自分専用の個室＋共用スペース
+              div class="d-flex f-align-items-center u-items"
+                div class="checkbox"
+                  label
+                    input type="checkbox"
+                    div class="u-title"
+                      span class="u-big"
+                        | シェアルーム
+                      span class="u-small"
+                        | 相部屋などのシェアルーム
+          div class="row pt2 cf"
+            div class="col-2 u-title-block"
+              | 一泊
+            div class="col-10 u-price-block cf"
+              div class="u-price-area"
+                input type="text" placeholder="1000"
+                input type="text" placeholder="100000"
+              p class="u-price-area-text"
+                | 平均相場は1泊あたり約¥8,000です
+          div class="row pt2 cf"
+            div class="col-2 u-title-block"
+              | こだわり条件
+            div class="col-10 row u-kodawari-block cf"
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big"
+                    | 部屋とベッド
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 1
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big"
+                    | ベッド
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 1
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big"
+                    | 寝室
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 1
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+              div class="d-flex f-align-items-center u-items"
+                div class="u-title"
+                  span class="u-big"
+                    | バスルーム
+                button type="button" class="count-btn count-down"
+                  i class="material-icons"
+                    | remove
+                input type="hidden" name=""
+                div class="count-number"
+                  | 1
+                button type="button" class="count-btn count-up"
+                  i class="material-icons"
+                    | add
+    / 
+    section id="u-tab-minpaku" class="collapse" aria-labelledby="u-tab-minpaku" data-parent="#u-search-accordion"
+      | 民泊.com中身
+
+    article
+      div class="u-search-area cf"
+        div class="input-search"
+          input class="input" type="search" value="" placeholder="東京"
+          i class="material-icons"
+            | search
+        button type="submit" class="btn-search btn-size-LL site-color shadow" id="btn-search"
+          span 検索

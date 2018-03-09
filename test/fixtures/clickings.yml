@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: one
+  cookie: MyString
+  user: one
+
+two:
+  room: two
+  cookie: MyString
+  user: two
